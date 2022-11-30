@@ -30,7 +30,7 @@ git clone https://github.com/vernesong/OpenClash.git package/x64_gxnas-Software
 #git clone https://github.com/QiuSimons/openwrt-mos.git package/x64_gxnas-Software  
 
 #use zsh as default shell 
-sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
+#sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
 #添加ssrplus+插件包
 #git clone https://github.com/fw876/helloworld.git package/x64_gxnas-Software/ssrplus
