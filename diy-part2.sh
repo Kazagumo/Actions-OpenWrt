@@ -31,10 +31,3 @@ wget https://raw.githubusercontent.com/SuLingGG/OpenWrt-Rpi/main/data/zsh/.zshrc
 #use zsh as default shell 
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
-
-# 设置首次登录后台密码为空（进入openwrt后自行修改密码）
-sed -i '/CYXluq4wUazHjmCDBCqXF/d' "$ZZZ_PATH"
-
-
-# 删除默认防火墙
-sed -i '/to-ports 53/d' "$ZZZ_PATH"
