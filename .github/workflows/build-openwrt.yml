@@ -104,10 +104,9 @@ jobs:
 
     - name: Upload bin directory
       uses: actions/upload-artifact@main
-      if: env.UPLOAD_BIN_DIR == 'true'
       with:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: openwrt
+        path: openwrt/*
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.1.0
