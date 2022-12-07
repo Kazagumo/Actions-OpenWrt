@@ -97,7 +97,8 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-        tar -zcvf op.tar.gz ./*
+        mkdir upload
+        tar -zcvf ./upload/op.tar.gz ./*
 
     - name: Check space usage
       if: (!cancelled())
@@ -107,7 +108,7 @@ jobs:
       uses: actions/upload-artifact@main
       with:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: openwrt/op.tar.gz
+        path: openwrt/upload
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.1.0
