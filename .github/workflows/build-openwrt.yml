@@ -98,7 +98,7 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
         mkdir ./upload
-        tar -zcvf ./upload/op.tar.gz ./*  --exclude=./upload
+        tar -zcvf ./upload/op.tar.gz --exclude=./upload ./*  
 
     - name: Check space usage
       if: (!cancelled())
