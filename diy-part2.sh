@@ -13,6 +13,7 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/option check_signature/arch all 100\narch aarch64_cortex-a53_neon 200\narch aarch64_cortex-a53 300/g' package/base-files/files/etc/opkg.conf
 
 mkdir -p files/root
 pushd files/root
